@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(4, 1, 28);
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    flex-wrap: nowrap;
+}
+body::before {
+    content: "mohmad Farhanh";
+    position: absolute;
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-style: italic;
+    text-transform: capitalize;
+    left: 0;
+    top: 0;
+}
+h3 {
+    font-size: 90px;
+    color: rgb(255 17 243);
+    position: absolute;
+    top: -70px;
+    text-shadow: 0px -12px 81px rgb(255 17 243);
+}
+
+.game {
+    border: 2px solid rgb(255, 17, 243);
+    margin-right: 60px;
+    /* left: 60%;
+    top: 50%; */
+    /* transform: translate(-50%,-50%); */
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(3,auto);
+    box-shadow: 0px 0px 94px 1px rgb(255 17 243), 0px 0px 56px -1px rgb(255 17 243) inset;
+}
+.xo {
+        width: 200px;
+        height: 200px;
+        border: 2px solid rgb(255, 17, 243);
+}
+.xo button {
+    border: none;
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.x,
+.y {
+    position: relative;
+}
+.x::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 121px;
+    background-color: rgb(255, 17, 243);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+   
+}
+.x::before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 121px;
+    background-color: rgb(255, 17, 243);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+
+}
+
+.y::before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 121px;
+    background-color: rgb(255, 17, 243);
+    left: 50%;
+    top: 50%;
+    transform: translate(500%, -50%) rotate(45deg) ;
+
+}
+.y::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 45px;
+    background-color: rgb(255, 17, 243);
+    left: 32%;
+    top: 39%;
+    transform: translate(50%, 66%) rotate(-45deg);
+
+}
+
+.result {
+    border: 2px solid rgb(255, 17, 243);
+
+    /* left: 10%;
+    top: 50%;
+    transform: translate(0%,-50%); */
+  
+    width: 400px;
+    height: fit-content;
+   background-image: linear-gradient(to top,rgb(255 17 243),black 74%) ;
+
+    box-shadow: 0px 0px 94px 1px rgb(255 17 243), 0px 0px 56px -1px rgb(255 17 243) inset;
+}
+.title {
+    border-bottom: 2px solid white;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+ .titleX,
+ .titleY { 
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+.resultXO {
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    justify-content: space-around;
+}
+.resultXO .childOne,
+.resultXO .childOne
+ {
+    width: 50%;
+    height: 100%;
+}
+p {
+    font-size: 40px;
+    color: white;
+}
